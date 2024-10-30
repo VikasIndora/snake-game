@@ -14,4 +14,20 @@ body {
     background-size: 100vw 100vh; */
     background: linear-gradient(#6CBB3C, #8A3CBA);
     background-size: 100vw 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#board {
+    background-color: white;
+    width: 500px;
+    height: 500px;
+
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(18, 1fr);
 }
