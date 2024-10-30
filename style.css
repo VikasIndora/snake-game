@@ -3,31 +3,47 @@
     margin: 0;
 }
 
-button {
-    padding: 5px 15px;
-    border-radius: 1rem;
-}
-
 body {
-    /* background-image: url(./assets/background.jpg);
-    background-repeat: no-repeat;
-    background-size: 100vw 100vh; */
-    background: linear-gradient(#6CBB3C, #8A3CBA);
-    background-size: 100vw 100vh;
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+        'heading heading heading'
+        'button board board'
+        'score board board';
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-items: center;
     align-items: center;
-    gap: 10px;
 }
+
+h1 {
+    grid-area: heading;
+}
+
+#buttons {
+    grid-area: button;
+
+    display: grid;
+    gap: 1rem;
+}
+
+#scoreDisplay {
+    grid-area: score;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+}
+
+
 
 #board {
+    grid-area: board;
+
     background-color: white;
     width: 500px;
     height: 500px;
 
     display: grid;
-    grid-template-columns: repeat(18, 1fr);
-    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
 }
